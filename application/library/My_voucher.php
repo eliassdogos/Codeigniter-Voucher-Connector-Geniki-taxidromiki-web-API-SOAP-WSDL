@@ -1,5 +1,15 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
+
+/**
+ * Name:  Codeigniter voucher library API for  Geniki's web API SOAP/WSDL
+ * Author:  Elias Sdogos
+ * Email: elsdogos@gmail.com
+ * @link https://github.com/eliassdogos/
+ * @filesource
+ */
+
+
 class My_voucher {
 
 public $user;
