@@ -1,5 +1,7 @@
-#Codeigniter Library 
-Custom Codeigniter Library for interaction with API Geniki Taxidromiki Greek Shipper Company (https://www.taxydromiki.com/ )
+#Codeigniter MyVoucher
+
+
+Custom Library for interaction with API Geniki Taxidromiki Greek Shipper Company (https://www.taxydromiki.com/ )
 
 #Important. This code is tested on Geniki's web API SOAP/WSDL web service version 2018.
 
