@@ -4,6 +4,7 @@
 Custom Library for interaction with API Geniki Taxidromiki Greek Shipper Company (https://www.taxydromiki.com/ )
 
 #Important. This code is tested on Geniki's web API SOAP/WSDL web service version 2018.
+#Works on Codeigniter >= 3.1.4
 
 STEPS
 1. First you must have signed to Geniki Taxidromiki and optain Username - Password and API KEY for live and production  environment.
