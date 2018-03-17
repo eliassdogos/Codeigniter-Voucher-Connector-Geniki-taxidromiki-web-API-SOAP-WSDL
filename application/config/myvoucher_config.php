@@ -13,3 +13,4 @@ $config['voucher']['user']     = "yourusername";
 $config['voucher']['pass']     = "yourpassword";
 $config['voucher']['api']     = "Your Api";
 $config['voucher']['url']     = "URL Provided by Geniki Taxidromiki"; // url for live or production enviroment
+$config['voucher']['urlpost']     = "URL Provided by Geniki Taxidromiki"; // url for live or production enviroment to Send Vouchers Numbers and Print Parameters. For example https://testvoucher.taxydromiki.gr/JobServices.asmx/GetVouchersPdf?authKey=

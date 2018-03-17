@@ -48,13 +48,69 @@ public $url;
                             }// End Connect Function
 
 
+                            public function assign2key()
+                            {	
+                                    return $this->secondpasskey;
+                                
+                                }//end function assign2key
+
+
+
+                                public function get_status_for_jobid($key,$jobid)
+                                        {
+                                                $soap = new SoapClient($this->url);
+                                                $xml = array(
+                                                'sAuthKey' => $key,
+                                                'nJobId' => $jobid,//Data
+                                                );
+                                                $resultstatus=$soap->GetVoucherJob($xml);
+                                                return $resultstatus;
+                                        }//end function
+
+
+                        public function cancel_jobid($key,$jobid)
+                        {
+                                $soap = new SoapClient($this->url);
+                                                           $xml = array(
+                                                'sAuthKey' => $key,
+                                                'nJobId' => $jobid,// JobId
+                                                'bCancel' => true, //If cancel parameter is true the job is canceled.
+                                                          );
+                                                $resultcancel=$soap->CancelJob($xml);
+                                                return $resultcancel;
+                                          }//end function
 
 
 
 
 
+                                public function create_voucher_and_insert($secondkey,$datacustomer,$orderid)
+                                {
+                                $soap = new SoapClient($this->url);
+                                $xml = array(
+                                'sAuthKey' => $secondkey,
+                                'oVoucher' => $datacustomer,//Data Customer is Array() with Order's data
+                                'eType' =>  "Voucher"
+                                );
+                                        $oResult = $soap->CreateJob($xml); //Voucher creation (Usage of the CreateJob method)
+                                        $newvoucher=$this->voucherID=$oResult->CreateJobResult->Voucher; //Initilize Variable voucherID which is voucher number that this job created and assign as public to Variable $newvoucher
+                                        $newvoucherreturn=$this->newvoucherreturn=$newvoucher;//Global Variable To Current Library
+                                        $jobidcreated=$this->voucherID=$oResult->CreateJobResult->JobId;
+                                        return $jobidcreated; //Send Result of Voucher Create Method
+                                          }
 
 
+                                public function get_current_voucher()
+                                          {
+                                             return $this->newvoucherreturn;
+                                                   }//end function
+
+
+                                public function track_and_trace($datav){
+                                         $soap = new SoapClient($this->url);
+                                                $TT = $soap->TrackAndTrace($datav);
+                                                        return $TT;
+                                        }//end function
 
 
 
