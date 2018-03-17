@@ -8,7 +8,7 @@
  */
 
 
- //All vars will be in 2 dimesional Array because string "user" is common or reserved variable and we want to avoid conflict
+ //All vars will be in 2 dimesional Array because string "user","pass" etc  are common or reserved variable and we want to avoid conflict
 $config['voucher']['user']     = "yourusername";
 $config['voucher']['pass']     = "yourpassword";
 $config['voucher']['api']     = "Your Api";
