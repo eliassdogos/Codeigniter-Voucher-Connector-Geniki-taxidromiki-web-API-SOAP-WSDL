@@ -14,7 +14,7 @@ STEPS
 
 
 
-# Methods of Library application/myvoucher
+# Methods / Library application/myvoucher
 
 1. Connect() . Connect and check Connection
 2. Assign2key() Get Second key after succes connection
