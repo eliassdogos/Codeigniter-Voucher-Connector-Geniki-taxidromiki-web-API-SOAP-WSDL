@@ -55,7 +55,7 @@ foreach (  $istherevoucher->result_array() as $voucherdata){
                         );
 $jobid=$this->my_voucher->create_voucher_and_insert($secondkey,$oVoucher,$voucherdata["Columnu_of_Order_id"]);//Assign to variable JobId Result of Voucher Create Method
 $currentvoucher=$this->my_voucher->get_current_voucher();//Geting Voucher Number from current orderId
-$this->voucher_model->insert_vouche_data_to_your_database($currentvoucher$voucherdata["Columnu_of_Order_id"],$jobid);// Insert Voucher Id To Database / Order details // Optional. It depends your Tables and what you want
+$this->voucher_model->insert_vouche_data_to_your_database($currentvoucher,$voucherdata["Columnu_of_Order_id"],$jobid); // Insert Voucher Id To Database / Order details // Optional. It depends your Tables and what you want
 $newprintvoucher="&voucherNumbers=".urlencode($currentvoucher);//Assign Current Voucher Number To URL variable "&voucherNumbers="
     }//End foreach  loop
     $mergeprintvoucher.=$newprintvoucher;// Merge &voucherNumbers= to URL
@@ -67,7 +67,8 @@ $urlforgreekshiper=$this->config->item('urlpost','voucher');// GEting URL to pos
 $urlprintvoucher=$urlforgreekshiper.$secondkeyencoded.$mergeprintvoucher."&Format=Sticker&extraInfoFormat=None";//Setting URL
 redirect($urlprintvoucher);// and Redirect to print PDFS
 
-}///End function index Voucher Create
+}///End function index Voucher Create 
+
 
 
 
