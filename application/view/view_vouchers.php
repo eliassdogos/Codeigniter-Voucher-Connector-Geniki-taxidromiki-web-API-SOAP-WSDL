@@ -52,7 +52,7 @@
         					                 <?php $j=$j+1; } ?>
                   <tr>
                     <th colspan="4"scope="row"><?php
-                    echo $statusvoucher->TrackAndTraceResult->Status." στις ".$statusvoucher->TrackAndTraceResult->DeliveryDate; ?></th>
+                    echo $statusvoucher->TrackAndTraceResult->Status." at ".$statusvoucher->TrackAndTraceResult->DeliveryDate; ?></th>
                   </tr>
         							</tbody>
         						</table>
