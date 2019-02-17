@@ -1,5 +1,5 @@
 #Codeigniter MyVoucher
-
+dd
 
 Custom Library for interaction with API Geniki Taxidromiki Greek Shipper Company (https://www.taxydromiki.com/ )
 
@@ -7,9 +7,9 @@ Custom Library for interaction with API Geniki Taxidromiki Greek Shipper Company
 #Works on Codeigniter >= 3.1.4
 
 STEPS
-1. First you must have signed to Geniki Taxidromiki and optain Username - Password and API KEY for live and production  environment.
-2. All Functions are the same for LIVE and PRODUCTION enviroment. The only change is to set up the fields in application/config/* for each case
 
+1. First you must have signed to Geniki Taxidromiki and optain Username - Password and API KEY for live and production environment.
+2. All Functions are the same for LIVE and PRODUCTION enviroment. The only change is to set up the fields in application/config/\* for each case
 
 # Methods / Library application/myvoucher
 
